@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation-name: manish;
+            animation-duration: 3s;
+            animation-delay: 4s;
+            animation-fill-mode: backwards;
+        }
+
+        #div1 {
+            animation-timing-function: linear;
+        }
+
+        #div2 {
+            animation-timing-function: ease;
+        }
+
+        #div3 {
+            animation-timing-function: ease-in;
+        }
+
+        #div4 {
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes manish {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            10% {
+                background-color: chocolate;
+                left: 200px;
+                top: 0px;
+            }
+
+            20% {
+                background-color: darkblue;
+                left: 200px;
+                top: 200px;
+            }
+
+            50% {
+                background-color: darkred;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: rgb(112, 20, 121);
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css animations</h1>
+    <div id="div1"></div><br>
+    <div id="div2"></div><br>
+    <div id="div3"></div><br>
+    <div id="div4"></div><br>
+</body>
+
+</html>

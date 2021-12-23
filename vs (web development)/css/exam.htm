@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+.flex-container {
+  display:flex;
+  background-color: rgb(120, 120, 201);
+
+}
+
+.flex-container > div  {
+  background-color: rgb(185, 41, 65);
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+#grad1{
+    height: 200px;
+    background-color: khaki;
+    background-image: repeating-radial-gradient(blue 4px,green 30px,white 10px);
+}
+h3::first-line{color: lawngreen;}
+h3::first-letter{color: red;
+font-size: 100;}
+h3::before{content: ś;}
+</style>
+</head>
+<body>
+
+<h3>Create a Flex Container using of reapeating radient and using of flex for making the it </h3>
+
+<div class="flex-container">
+  <div>html</div>
+  <div>css</div>
+  <div>java</div>  
+</div>
+<div id="grad1"></div>
+</body>
+</html>
