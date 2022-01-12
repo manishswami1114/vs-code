@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <script>
+        function validate(age){
+            var ans="not eigible";
+            if(age>=18){
+                ans="eligible";
+            }
+            return(ans);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var age=parseInt(prompt("Enter age"));
+        var status=validate(age);
+        document.write("You are <b>"+status+"</b> for driving");
+    </script>
+</body>
+</html>

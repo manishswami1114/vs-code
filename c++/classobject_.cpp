@@ -13,7 +13,7 @@ void A:: display(){
     cout<<2*(x+y)<<endl;
 }
 int main(){
-    A obj;
-    obj.accept();
-    obj.display();
+    A obj1;
+    obj1.accept();
+    obj1.display();
 }
