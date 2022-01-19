@@ -15,6 +15,7 @@ void function(int arr[],int n,int m){
     int m;
     while(m--){
         if(m<n)
+        
     }
 }
 int main(){

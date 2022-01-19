@@ -1,0 +1,10 @@
+.class{
+  background-color: aqua;
+  color: rgb(160, 123, 196);
+  padding: 10px;
+}
+.small{
+  background-color: chocolate;
+  color: beige;
+  padding: 10px;
+}

@@ -1,0 +1,60 @@
+<html>
+<body>
+    <p id="tostring"></p>
+    <p id="join"></p>
+    <p id="sort"></p>
+    <p id="reverse"></p>
+    <p id="shift"></p>
+    <p id="unshift"></p>
+    <p id="splice"></p>
+    <p id="indexof"></p>
+    <p id="length"></p>
+    <p id="pop"></p>
+    <p id="pineapple"></p>
+    <script>
+        var fruits = ["banana", "orange", "apple", "mango"];
+        document.getElementById("tostring").innerHTML = fruits.toString();
+
+        //for join
+        document.getElementById("join").innerHTML = fruits.join("#");
+
+
+        //sort the array
+        fruits.sort();
+        document.getElementById("sort").innerHTML = fruits;
+        
+        //reverse the array after the sort 
+        fruits.reverse();
+        document.getElementById("reverse").innerHTML = fruits;
+        //after reverse array= orange,mango,banana,apple
+
+        fruits.shift();
+        document.getElementById("shift").innerHTML = fruits;
+        //after shift remaining array= mango banana apple
+
+        fruits.unshift("lemon");
+        document.getElementById("unshift").innerHTML = fruits;
+        //afre unshift add 0 index element "lemon"
+
+        fruits.splice(2,0,"watermelon","kiwi")
+        document.getElementById("splice").innerHTML = fruits;
+        // after splice add 2 fruits at position of index 2 without removing any array element 
+        //(0 for number of elemnent can remove for add 2 element)
+
+        var index=fruits.indexOf("kIwi");
+        document.getElementById("indexof").innerHTML = index;
+        //after index find the elemenet index value
+        document.getElementById("length").innerHTML = fruits.length;
+        //after using length find the length of array
+
+        fruits.pop();
+        document.getElementById("pop").innerHTML = fruits;
+
+        fruits.push("pineapple");
+        document.getElementById("pineapple").innerHTML=fruits;
+        
+
+    </script>
+</body>
+
+</html>

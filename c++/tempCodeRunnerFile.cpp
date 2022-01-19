@@ -1,1 +1,3 @@
-rep
+
+        cin>>arr[i];
+    }

@@ -1,29 +1,22 @@
 #include<iostream>
 using namespace std;
-int  fun(int p[],int n){
-    int sum=0;
-    int large=p[0];
-    int l=0;
+void array(int arr[],int n){
+    int min=arr[0];
     for(int i=0;i<n;i++){
-        //sum+=p[i];//
-        if(large<p[i]){
-            large=p[i];
-            l=i;
+        if(arr[i]>min){
+            min=arr[i];
+            int index=i;
         }
-    }
-    cout<<l<<endl;
-    return large;
-    //int avg=sum/n;//
-    //return avg;// 
-    //return sum;//
+        }
+return index;
 }
-    int main(){
+int main(){
     int n;
     cin>>n;
-    int p[n];
+    int arr[n];
     for(int i=0;i<n;i++){
-        cin>>p[i];
-    }
-    fun(p,n);
-    cout<<fun(p,n)<<endl;
+        cin>>arr[i];
+        }
+    cout<<array(arr,n)<<endl;
+    return 0;
 }

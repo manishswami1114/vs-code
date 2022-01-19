@@ -6,7 +6,7 @@ void p1(int x)
     {
         for (int j = 1; j <= i; j++)
         {
-            cout <<;
+            cout <<--j;
         }
         cout << endl;
     }
