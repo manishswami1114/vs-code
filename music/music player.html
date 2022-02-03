@@ -1,0 +1,877 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <!-- code for responsive design  -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- title for the web page  -->
+        <title>Music Player</title>
+        <!-- script  -->
+        <script src="https://kit.fontawesome.com/c487042078.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        /* styling for header */
+        .nav {
+            /* border: 2px solid red; */
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        #nav-bar-first {
+            /* border: 2px solid white; */
+            display: block;
+            color: aliceblue;
+            justify-content: center;
+            padding-left: 6px;
+            padding-right: 23px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-right: 545px;
+            margin-left: 86px;
+        }
+
+        /* styling for header ends  */
+
+        /*styling for the div containing search bar   */
+        .right {
+            display: inline-block;
+            border-radius: 4px;
+            width: 9%;
+            position: absolute;
+            left: 76%;
+            bottom: 96px;
+            top: -15px;
+
+        }
+
+        /* styling for logo image  */
+        #img1 {
+            margin-bottom: 23px;
+            margin-top: -95px;
+            margin-left: -48px;
+            border-radius: 50%;
+        }
+
+        /* styling for search bar  */
+        .search {
+            /* border: 2px solid white; */
+            color: aqua;
+            display: block;
+            /* float: left; */
+            padding-left: 189px;
+            justify-content: center;
+            padding-right: 56px;
+            margin-right: 45px;
+            margin-bottom: 66px;
+            margin-left: 352px;
+
+        }
+
+        /* styling for sd  */
+        #sd {
+            margin-bottom: 90px;
+            border: 3px solid white;
+            color: white;
+            width: 229px;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* styling for bell icon  */
+        #bell {
+            position: absolute;
+            left: 87%;
+            bottom: 97px;
+            filter: invert();
+            display: inline-block;
+        }
+
+        #bell:hover {
+            color: yellow;
+        }
+
+        /* styling for bell icon ends  */
+
+        /* styling for dp image */
+        #top-image {
+            position: absolute;
+            left: 89%;
+            bottom: 645px;
+        }
+
+        /* styling for Top releases heading */
+        .latest {
+            padding-left: 2px;
+            padding-top: 12px;
+            display: block;
+        }
+
+        /* styling for song1 under top releases  */
+        #latest1 {
+            margin-bottom: 45px;
+            position: absolute;
+            left: 35%;
+            right: 3%;
+            display: inline-block;
+            width: 34px;
+            height: 45px;
+            bottom: 185px;
+        }
+
+        /* styling for song2 under top releases  */
+        #latest2 {
+            margin-bottom: 45px;
+            position: absolute;
+            left: 35%;
+            right: 3%;
+            display: inline-block;
+            width: 34px;
+            height: 45px;
+            bottom: -59px;
+        }
+
+        /* styling for song3 under top releases  */
+
+        #latest3 {
+            margin-bottom: 45px;
+            position: absolute;
+            left: 1%;
+            right: 3%;
+            display: inline-block;
+            width: 34px;
+            height: 45px;
+            bottom: -59px;
+        }
+
+        /* styling for song4 under top releases  */
+
+        #latest4 {
+
+            margin-bottom: 45px;
+            position: absolute;
+            left: 1%;
+            right: 3%;
+            display: inline-block;
+            width: 34px;
+            height: 45px;
+            bottom: 186px;
+        }
+
+        /* styling for icon along the images in top releases*/
+        .icon:hover {
+            color: yellow;
+        }
+
+        /* scollbar stylings  */
+
+        .mainbox {
+            border: 2px solid whitesmoke;
+            background-color: rgb(51, 51, 165);
+            position: absolute;
+            height: 1057px;
+            width: 258px;
+            display: inline-block;
+            left: 1258px;
+            top: -2105px;
+            /* background-color: violet; */
+            overflow: scroll;
+        }
+
+        /* carousel stylings  */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        /* ----- container stylings: 
+        -> centers the whole content of the page
+        -> defines width and height for container ----- */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 1100px;
+            height: 320px;
+            position: absolute;
+            left: 40px;
+        }
+
+        /* ----- end of container stylings ----- */
+
+        /* provides padding to main heading */
+        .main-heading {
+            padding: 2rem 0 2rem 0;
+        }
+
+        /* defines position for the carousel container  */
+        .content {
+            position: relative;
+        }
+
+        /* ----- carousel content stylings ----- */
+        /* places the carousel content on center of the carousel */
+        .carousel-content {
+            position: absolute;
+            /*to center the content horizontally and vertically*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 50;
+        }
+
+        /* carousel heading styling  */
+        .carousel-heading {
+            font-size: 3rem;
+            color: #308d46;
+            margin-bottom: 1rem;
+        }
+
+        /*----- end of carousel content stylings ----- */
+
+        /* ----- slideshow stylings ----- */
+        .slideshow {
+            height: 100%;
+            overflow: hidden;
+            /* to hide slides in x-direction */
+            position: relative;
+        }
+
+        /* wrapper which wraps all the slideshow images stylings */
+        .slideshow-wrapper {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            position: relative;
+            /* animation styling */
+            animation: slideshow 20s infinite;
+        }
+
+        /* define width and height for slide*/
+        .slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* width and height for the images in the slide */
+        .slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* @keyframes are used to provide animation*/
+        @keyframes slideshow {
+            0% {
+                left: 0;
+            }
+
+            10% {
+                left: 0;
+            }
+
+            15% {
+                left: -100%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            30% {
+                left: -200%;
+            }
+
+            40% {
+                left: -200%;
+            }
+
+            45% {
+                left: -300%;
+            }
+
+            55% {
+                left: -300%;
+            }
+
+            60% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -100%;
+            }
+
+            85% {
+                left: -100%;
+            }
+
+            90% {
+                left: 0%;
+            }
+        }
+
+        /* ----- end of slideshow stylings ----- */
+    </style>
+
+    <body style="background-color: rgb(6, 0, 37);">
+        <!--code for header section  -->
+        <div class="nav">
+            <!-- heading on the top  -->
+            <div class="first">
+                <p id="nav-bar-first">Music Studio
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favourites
+                </p>
+            </div>
+
+            <!-- image of logo  -->
+
+            <div class="logo" style="padding-left: 40px;padding-top: 50px;">
+                <img id="img1" src="logo.png" alt="" width="85px" height="90px">
+            </div>
+
+            <!-- search bar  -->
+
+            <div class="right">
+                <div class="btn">
+                    <input type="search" placeholder="Search"
+                        style="background-color: rgb(2, 2, 51);border-radius: 5%;width: 351px;position: absolute;left: -200px;height: 30px;top: 20px;">
+                </div>
+            </div>
+
+            <!-- bell button  -->
+
+            <div id="bell" style="padding-left: 20px;position:absolute;top:14px;">
+                <i class="far fa-bell"></i>
+            </div>
+
+        </div>
+
+        <!-- dp image  -->
+        <div id="top-image" style="padding-left: 50px;padding-top: 3px;">
+            <img src="abc.jpg" alt="dp" width="85px" height="80px" style="border-radius: 50%;">
+        </div>
+
+        <!-- carousel  -->
+
+        <div class="container">
+            <div class="slideshow">
+                <!-- carousel wrapper which contains all images -->
+                <div class="slideshow-wrapper">
+                    <div class="slide">
+                        <!-- image1 in carousel  -->
+                        <img class="slide-img" src="project3.jpeg">
+                    </div>
+                    <!-- image 2  -->
+                    <div class="slide">
+                        <img class="slide-img" src="project1.jpeg">
+                    </div>
+                    <!-- image 3  -->
+                    <div class="slide">
+                        <img class="slide-img" src="project4.jpg">
+                    </div>
+                    <!-- image 4  -->
+                    <div class="slide">
+                        <img class="slide-img" src="project2.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!-- top releases  -->
+        <div class="latest">
+            <h2 style="color: azure;margin-top: 300px;">Top Release</h2>
+            <br>
+            <br><br>
+
+            <!-- 4 songs under top release  -->
+            <!-- song1  -->
+            <div id="latest1">
+                <!-- image of the song  -->
+                <img src="Stereo Hearts.jpg" alt="" width="223px" height="216px" style="padding-top: 20px;">
+            </div>
+            <!-- info about the song  -->
+            <p style="position: absolute;left: 800px;bottom: 214px; color: azure;">Stereo Hearts</p>
+            <p style="position: absolute;left: 800px;bottom: 194px;color: azure;">Gym Class Heroes, Maroon 5</p>
+            <p style="position:absolute;left: 950px;bottom: 175px;color: azure;">4:44</p>
+            <!-- the three line icon along the image  -->
+            <div class="icon">
+                <i class="fas fa-align-justify"
+                    style="color: azure;position: absolute; left: 960px; bottom: 257px;"></i>
+            </div>
+
+            <!-- song2  -->
+
+            <div id="latest2">
+                <img src="believer.jpg" alt="" width="223px" height="216px">
+            </div>
+            <p style="position: absolute;left: 800px;bottom: -42px; color:azure;">Believer</p>
+            <p style="position: absolute;left: 800px;bottom: -61px;color:azure;">Imagine Dragons</p>
+            <p style="position:absolute;left: 950px;bottom: -73px;color:azure;">4:44</p>
+            <div class="icon">
+                <i class="fas fa-align-justify" style="color: azure;position: absolute; left: 960px; bottom: -6px;"></i>
+            </div>
+
+            <!-- song3  -->
+
+            <div id="latest3">
+                <img src="let me love you.jpg" alt="" width="223px" height="216px">
+            </div>
+            <p style="position: absolute;left: 255px;bottom: -20px; color: azure;">LET ME LOVE YOU</p>
+            <p style="position: absolute;left: 255px;bottom: -41px;color: azure;">Justin Bieber</p>
+            <p style="position:absolute;left: 408px;bottom: -53px;color: azure;">5:04</p>
+            <div class="icon">
+                <i class="fas fa-align-justify" style="color: azure;position: absolute; left: 415px; bottom: -6px;"></i>
+            </div>
+
+            <!-- song4  -->
+
+            <div id="latest4">
+                <img src="shapeofyou.jpg" alt="" width="223px" height="236px">
+            </div>
+            <p style="position: absolute;left: 255px;bottom: 234px; color: azure;">SHAPE OF YOU</p>
+            <p style="position: absolute;left: 255px;bottom: 214px;color: azure;">Ed Sheeran</p>
+            <p style="position:absolute;left: 377px;bottom: 199px;color: azure;">5:04</p>
+            <div class="icon">
+                <i class="fas fa-align-justify"
+                    style="color: azure;position: absolute; left: 390px; bottom: 257px;"></i>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- popular artists  -->
+
+
+        <div class="fourth-phase">
+            <h2 style="position: absolute;bottom: -259px;color: azure;">Popular Artists</h2>
+            <!-- artist 1  -->
+            <!-- div linking the file for playlist of the artist which opens when clicking on the artist's image  -->
+            <div class="phase4" style="position: absolute;bottom: -401px;"><a href="playlist1.html">
+                    <!--image of the artist   -->
+                    <img src="imagine dragons.jpg" alt="" width="150px" height="138px" style="border-radius: 50%;"></a>
+                <!-- name of the artist  -->
+                <p style="position: absolute;left: 28px;bottom: -34px;color: azure;"> Imagine Dragons</p>
+            </div>
+            <!-- artist 2  -->
+            <div class="phase5" style="position: absolute;bottom: -401px;left: 190px;"><a href="playlist2.html">
+                    <img src="alan walker.jpg" alt="" width="129px" height="138px" style="border-radius: 50%;"></a>
+                <p style="position: absolute; left: 25px; bottom: -34px;color: azure;">Alan Walker</p>
+            </div>
+            <!-- artist 3  -->
+            <div class="phase6" style="position: absolute;bottom: -401px;left: 360px;"><a href="playlist3.html">
+                    <img src="ed sheeran.jpg" alt="" width="129px" height="138px" style="border-radius: 50%;"> </a>
+                <p style="position: absolute;left: 28px;bottom: -34px;color: azure;">Ed Sheeran</p>
+            </div>
+            <!-- artist 4  -->
+            <div class="phase7" style="position: absolute;bottom: -401px;left: 522px;"><a href="playlist4.html">
+                    <img src="maroon5.jpg" alt="" width="159px" height="138px" style="border-radius: 50%;"></a>
+                <p style="position: absolute;left: 50px;bottom: -34px;color: azure;">Maroon 5</p>
+            </div>
+            <!-- artist 5  -->
+            <div class="phase7" style="position: absolute;bottom: -401px;left: 702px;"><a href="playlist5.html">
+                    <img src="justin bieber.jpg" alt="" width="129px" height="138px" style="border-radius: 50%;"></a>
+                <p style="position: absolute;left: 25px;bottom: -34px;color: azure;">Justin Bieber</p>
+            </div>
+            <!-- artist 6  -->
+            <div class="phase7" style="position: absolute;bottom: -401px;left: 852px;"><a href="playlist6.html">
+                    <img src="katy perry.jpg" alt="" width="129px" height="138px" style="border-radius: 50%;"></a>
+                <p style="position: absolute;left: 31px;bottom: -34px;color: azure;">Katy Perry</p>
+            </div>
+            <!-- artist 7  -->
+            <div class="phase7" style="position: absolute;bottom: -401px;left: 1000px;"><a href="playlist7.html">
+                    <img src="selena.jpg" alt="" width="129px" height="138px" style="border-radius: 50%;"></a>
+                <p style="position: absolute;left: 21px;bottom: -34px;color: azure;">Selena Gomez</p>
+            </div>
+        </div>
+
+
+        <!-- stations column giving diiferent types of music -->
+
+        <div class="fifth-phase"
+            style="border: 2px solid rgba(0, 0, 255, 0.333);background-color: rgb(51, 51, 165); height: 151px;position: absolute;bottom: -614px;width: 1242px;">
+            <!--image1   -->
+            <div style="position: absolute;bottom: -15px;left: -7px;">
+                <img src="stations.jpg" alt="" width="197px" height="174px" style="border-radius: 50%;">
+            </div>
+            <!-- image 2  -->
+            <div style="position: absolute;bottom: -15px;left: 210px;">
+                <img src="pop.png" alt="" width="197px" height="174px" style="border-radius: 50%;">
+            </div>
+            <!-- image 3  -->
+            <div style="position: absolute;bottom: -17px;left: 428px;">
+                <img src="retro.jpg" alt="" width="197px" height="174px" style="border-radius: 50%;">
+            </div>
+            <!-- image 4  -->
+            <div style="position: absolute;bottom: -17px;left: 645px;">
+                <img src="jazz.jpg" alt="" width="197px" height="174px" style="border-radius: 50%;">
+            </div>
+            <!-- image 5  -->
+            <div style="position: absolute;bottom: -17px;left: 860px;">
+                <img src="hip hop.jpg" alt="" width="197px" height="174px" style="border-radius: 50%;">
+            </div>
+            <!-- image 6  -->
+            <div style="position: absolute;bottom: -17px;left: 1073px;">
+                <img src="gym.jpg" alt="" width="197px" height="174px" style="border-radius: 50%;">
+            </div>
+        </div>
+
+        <!-- 3 larger images giving different music for diiferent moods  -->
+
+        <div class="six-phase">
+            <!-- image1  -->
+            <div style="position: absolute;bottom: -926px;left: 14pxpx;">
+                <img src="roadtrip.jpg" alt="" width="418px" height="260px">
+            </div>
+            <!--image 2   -->
+            <div style="position: absolute;bottom: -926px;left: 453px;">
+                <img src="party.jpg" alt="" width="418px" height="260px">
+            </div>
+            <!-- image 3  -->
+            <div style="position: absolute;bottom: -926px;left: 893px;">
+                <img src="electronic.jpg" alt="" width="418px" height="260px">
+            </div>
+        </div>
+
+        <!-- Most Played Row  -->
+
+        <div class="sev-phase">
+            <h2 style="color: azure;position: absolute;left: 8px;bottom: -994px;">Most Played</h2>
+            <!-- 1st song  -->
+            <div style="position: absolute;bottom: -1133px;left: 8px;cursor: pointer;">
+                <!-- img of the song  -->
+                <img src="astronaut in the ocean.jpg" alt="" width="155px" height="130px">
+                <!-- name of the song  -->
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Astronaut In The Ocean</p>
+                <!-- singer or artist of the song  -->
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Masked Wolf</p>
+            </div>
+            <!--  2nd song -->
+            <div style="position: absolute;bottom: -1133px;left: 177px;cursor: pointer;">
+                <img src="counting stars.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Counting Stars</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">OneRepublic</p>
+            </div>
+            <!-- 3rd song  -->
+            <div style="position: absolute;bottom: -1133px;left: 348px;cursor: pointer;">
+                <img src="shivers.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Shivers</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Ed Sheeran</p>
+            </div>
+            <!-- 4th song  -->
+            <div style="position: absolute;bottom: -1133px;left: 518px;cursor: pointer;">
+                <img src="girls like you (2).jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Girls Like You</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Maroon5</p>
+            </div>
+            <!-- 5th song  -->
+            <div style="position: absolute;bottom: -1133px;left: 689px;cursor: pointer;">
+                <img src="love the way you lie.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Love The Way You Lie</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Eminem</p>
+            </div>
+            <!--  6th song -->
+            <div style="position: absolute; bottom: -1133px;left: 862px;cursor: pointer;">
+                <img src="hall of fame.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Hall Of Fame</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">The Script</p>
+            </div>
+            <!-- 7th song  -->
+            <div style="position: absolute; bottom: -1133px;left: 1035px;cursor: pointer;">
+                <img src="bad liar.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Bad Liar</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Imagine Dragons</p>
+            </div>
+            <!-- 8th song  -->
+            <div style="position: absolute; bottom: -1133px;left: 1206px;cursor: pointer;">
+                <img src="wolves.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Wolves</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Selena Gomez</p>
+            </div>
+        </div>
+
+        <!-- My Favourites Row   -->
+
+        <div class="8phase">
+            <h2 style="color: azure;position: absolute;left: 3px;bottom: -1255px;">My Favourites</h2>
+            <!-- song1  -->
+            <div style="position: absolute;bottom: -1392px;left: 8px;cursor: pointer;">
+                <!-- image of the song  -->
+                <img src="something just like this.jpg" alt="" width="155px" height="130px">
+                <!-- name  -->
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Something Just Like..</p>
+                <!-- artist  -->
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Coldplay,ChainSmokers</p>
+            </div>
+            <!-- song2  -->
+            <div style="position: absolute;bottom: -1392px;left: 177px;cursor: pointer;">
+                <img src="heat waves.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Heat Waves</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Glass Animals</p>
+            </div>
+            <!-- song3  -->
+            <div style="position: absolute;bottom: -1392px;left: 348px;cursor: pointer;">
+                <img src="sunflower.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Sunflower</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Post Malone</p>
+            </div>
+            <!-- song4  -->
+            <div style="position: absolute;bottom: -1392px;left: 518px;cursor: pointer;">
+                <img src="lovely.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Lovely</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Billie Eilish,Khalid</p>
+            </div>
+            <!-- song5  -->
+            <div style="position: absolute;bottom: -1392px;left: 689px;cursor: pointer;">
+                <img src="nights.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">The Nights</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Avicii</p>
+            </div>
+            <!-- song6  -->
+            <div style="position: absolute;bottom: -1392px;left: 862px;cursor: pointer;">
+                <img src="hymn for the weekend.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Hymn For The Week..</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Coldplay</p>
+            </div>
+            <!-- song7  -->
+            <div style="position: absolute; bottom: -1392px;left: 1035px;cursor: pointer;">
+                <img src="demons.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Demons</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Imagine Dragons</p>
+            </div>
+            <!-- song8   -->
+            <div style="position: absolute; bottom: -1392px;left: 1206px;cursor: pointer;">
+                <img src="alone part 2.jpg" alt="" width="155px" height="130px">
+                <p style="position: absolute;left: 4x;bottom: -43px;color: azure;">Alone Pt.2</p>
+                <p style="position: absolute;left: 4x;bottom: -68px;color: azure;">Alan Walker</p>
+            </div>
+
+            <!-- code for the music player bar at the bottom  -->
+
+            <div class="play"
+                style="position: absolute;bottom: -1596px; width: 1510px;height: 115px;left: 0px; background-color:rgb(34, 34, 34);">
+                <div class="musicplay">
+                    <!-- previous song icon  -->
+                    <i class="fas fa-3x fa-fast-backward" style="color: white; position: absolute;left: 680px;
+    bottom: 84px;height: 3px;"></i>
+                </div>
+                <!-- next song icon  -->
+                <div class="musicplay">
+                    <i class="fas fa-3x fa-fast-forward" style="color: white; position: absolute;left: 817px;
+    bottom: 84px;height: 3px;"></i>
+                </div>
+                <!-- play pause icon  -->
+                <div class="musicplay">
+                    <i class="fas fa-3x fa-play-circle" style="color: white; position: absolute;left: 750px;
+    bottom: 84px;height: 3px;"></i>
+                </div>
+                <!-- the song bar icon which displays the length of the song  -->
+                <div id="myprogress-1">
+                    <input type="range" name="range" id="myprogress"
+                        style="width: 1510px;position: absolute;bottom: 9px;">
+                </div>
+                <!-- image and name of the song  -->
+                <div class="music-bar" style="position: absolute;left: 0px;bottom:26px ;">
+                    <img src="beggin.jpg" alt="" width="130px" height="110px">
+                    <p style="position: absolute;left: 138px;bottom: 31px;color: azure;">Beggin</p>
+                    <p style="position: absolute;left: 142px;bottom: 9px;color: azure;">Maneskin</p>
+                </div>
+
+                <div class="sound">
+                    <!-- speaker icon  -->
+                    <i class="fas fa-volume-up" style="color: white; position: absolute;left: 1396px;
+    bottom: 55px;height: 26px;"></i>>
+                    <!-- headset icon -->
+                    <i class="fas fa-headset" style="color: white; position: absolute;left: 1435px;
+    bottom: 55px;height: 26px;"></i>
+                    <i class="fas fa-volume-off"></i>
+                </div>
+
+
+                <!-- left side scrollbar   -->
+
+
+                <div class="leftbox">
+                    <div class="mainbox">
+                        <div class="main-box-musc">
+                            <!-- song1   -->
+                            <div style="padding-top: 3px; display: inline;margin-top: 10px;">
+                                <!-- image of the song  -->
+                                <img src="despacito.jpg" alt="" width="120px" height="81px">
+                                <!-- name  -->
+                                <p style="position: absolute;left: 138px;bottom:994px;color: azure;">Despacito</p>
+                                <!-- artist  -->
+                                <p style="position: absolute;left: 142px;bottom: 973px;color: grey;">Luis Fonsi</p>
+                            </div>
+                            <!--  song2  -->
+                            <div style="margin-top: 10px;">
+                                <img src="thunder.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 915px;color: azure;">Thunder</p>
+                                <p style="position: absolute;left: 142px;bottom: 895px;color: grey;">Imagine..</p>
+                            </div>
+                            <!--  song3  -->
+                            <div style="margin-top: 10px;">
+                                <img src="cheap thrills.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 834px;color: azure;">Cheap Thrills</p>
+                                <p style="position: absolute;left: 142px;bottom: 812px;color: grey;">Sia</p>
+                            </div>
+                            <!--  song4  -->
+                            <div style="margin-top: 10px;">
+                                <img src="lose yourself.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 730px;color: azure;">Lose Yourself</p>
+                                <p style="position: absolute;left: 142px;bottom: 715px;color: grey;">Eminem</p>
+                            </div>
+                            <!--  song5  -->
+                            <div style="margin-top: 10px;">
+                                <img src="sugar.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 646px;color: azure;">Sugar</p>
+                                <p style="position: absolute;left: 142px;bottom: 627px;color: grey;">Maroon5</p>
+                            </div>
+                            <!-- song6   -->
+                            <div style="margin-top: 10px;">
+                                <img src="infinity.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 555px;color: azure;">Infinity</p>
+                                <p style="position: absolute;left: 142px;bottom: 540px;color: grey;">James Young</p>
+                            </div>
+                            <!-- song7   -->
+                            <div style="margin-top: 10px;">
+                                <img src="hello.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 460px;color: azure;">Hello</p>
+                                <p style="position: absolute;left: 142px;bottom: 445px;color: grey;">Adele</p>
+                            </div>
+                            <!-- song8   -->
+                            <div style="margin-top: 10px;">
+                                <img src="closer.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 375px;color: azure;">Closer</p>
+                                <p style="position: absolute;left: 142px;bottom: 360px;color: grey;">ChainSmokers</p>
+                            </div>
+                            <!-- song9   -->
+                            <div style="margin-top: 10px;">
+                                <img src="uptown funk.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 290px;color: azure;">Uptown Funk</p>
+                                <p style="position: absolute;left: 142px;bottom: 270px;color: grey;">Bruno Mars</p>
+                            </div>
+                            <!--  song10  -->
+                            <div style="margin-top: 10px;">
+                                <img src="faded alan walker.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 190px;color: azure;">Faded</p>
+                                <p style="position: absolute;left: 142px;bottom: 170px;color: grey;">Alan Walker</p>
+                            </div>
+                            <!--  song11  -->
+                            <div style="margin-top: 10px;">
+                                <img src="alone.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: 100px;color: azure;">Alone</p>
+                                <p style="position: absolute;left: 142px;bottom: 80px;color: grey;">Alan Walker</p>
+                            </div>
+                            <!-- song12   -->
+                            <div style="margin-top: 10px;">
+                                <img src="sorry.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -1px;color: azure;">Sorry</p>
+                                <p style="position: absolute;left: 142px;bottom: -20px;color: grey;">Justin Bieber</p>
+                            </div>
+                            <!--  song13  -->
+                            <div style="margin-top: 10px;">
+                                <img src="start again.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -90px;color: azure;">Start Again</p>
+                                <p style="position: absolute;left: 142px;bottom: -110px;color: grey;">OneRepublic</p>
+                            </div>
+                            <!-- song14   -->
+                            <div style="margin-top: 10px;">
+                                <img src="see you again.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -180px;color: azure;">See You Again</p>
+                                <p style="position: absolute;left: 142px;bottom: -200px;color: grey;">Charlie Puth</p>
+                            </div>
+                            <!-- song15   -->
+                            <div style="margin-top: 10px;">
+                                <img src="havana.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -276px;color: azure;">Havana</p>
+                                <p style="position: absolute;left: 142px;bottom: -294px;color: grey;">Camilla</p>
+                            </div>
+                            <!--  song16  -->
+                            <div style="margin-top: 10px;">
+                                <img src="rockstar.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -365px;color: azure;">Rockstar</p>
+                                <p style="position: absolute;left: 142px;bottom: -380px;color: grey;">Post Malone</p>
+                            </div>
+                            <!-- song 17   -->
+                            <div style="margin-top: 10px;">
+                                <img src="back to you.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -455px;color: azure;">Back To You</p>
+                                <p style="position: absolute;left: 142px;bottom: -470px;color: grey;">Selena Gomez</p>
+                            </div>
+                            <!-- song18   -->
+                            <div style="margin-top: 10px;">
+                                <img src="bella ciao 2.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -540px;color: azure;">Bella Ciao</p>
+                                <p style="position: absolute;left: 142px;bottom: -560px;color: grey;">Money Heist</p>
+                            </div>
+                            <!-- song19   -->
+                            <div style="margin-top: 10px;">
+                                <img src="darkside.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -630px;color: azure;">Darkside</p>
+                                <p style="position: absolute;left: 142px;bottom: -650px;color: grey;">Alan Walker</p>
+                            </div>
+                            <!--  song20  -->
+                            <div style="margin-top: 10px;">
+                                <img src="all we know.jpeg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -720px;color: azure;">All We Know</p>
+                                <p style="position: absolute;left: 142px;bottom: -740px;color: grey;">Chainsmokers</p>
+                            </div>
+                            <!--  song21  -->
+                            <div style="margin-top: 10px;">
+                                <img src="starboy.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -810px;color: azure;">Starboy</p>
+                                <p style="position: absolute;left: 142px;bottom: -830px;color: grey;">The Weekend</p>
+                            </div>
+                            <!-- song22   -->
+                            <div style="margin-top: 10px;">
+                                <img src="work.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -900px;color: azure;">Work</p>
+                                <p style="position: absolute;left: 142px;bottom: -920px;color: grey;">Rihana</p>
+                            </div>
+                            <!-- song23   -->
+                            <div style="margin-top: 10px;">
+                                <img src="run.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -1000px;color: azure;">Run</p>
+                                <p style="position: absolute;left: 142px;bottom: -1020px;color: grey;">OneRepublic</p>
+                            </div>
+                            <!-- song24   -->
+                            <div style="margin-top: 10px;">
+                                <img src="blinding lights.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -1100px;color: azure;">Blinding Lights
+                                </p>
+                                <p style="position: absolute;left: 142px;bottom: -1120px;color: grey;">The Weekend</p>
+                            </div>
+                            <!-- song25  -->
+                            <div style="margin-top: 10px;">
+                                <img src="without me.jpg" alt="" width="120px" height="81px">
+                                <p style="position: absolute;left: 138px;bottom: -1180px;color: azure;">Without Me</p>
+                                <p style="position: absolute;left: 142px;bottom: -1200px;color: grey;">Halsey</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </body>
+
+    </html>

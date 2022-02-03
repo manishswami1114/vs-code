@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>List</title>
+</head>
 <body>
-
-
-<script>
-var text=prompt("enter number");
-switch (text) {
-  case "a":
-    text = "good job";
-    break;
-  case "b":
-    text = "pretty good";
-    break;
-  case "c":
-    text = "passed";
-    break;
-  case "d":
-    day = "not so good";
-    break;
-  case "e":
-    text = "failed";
-    break;
- 
-    default:
-    text="unkown grade"
-}
-document.getElementById("demo").innerHTML =  text;
-</script>
-
+<ul id="list">
+<li>
+a
+</li>
+<li>
+b
+</li>
+<li id="c">
+c
+</li>
+<li id="d">
+d
+</li>
+</ul>
+<button id="add" onclick="add()">Append</button>
+<button id="remove" onclick="rem()">Remove</button>
+<button id="replac" onclick="rep()">Replace</button>
 </body>
+<script>
+let parent = document.getElementById("list");
+function add() {
+let li = document.createElement("li");
+let text = document.createTextNode("e");
+li.append(text);
+parent.append(li);
+}
+function rem() {
+document.getElementById("c").remove();
+}
+
+function rep() {
+let a = document.getElementById("d");
+let li = document.createElement("li");
+let text = document.createTextNode("e");
+li.append(text);
+
+parent.replaceChild(li, a);
+}
+</script>
 </html>

@@ -1,0 +1,399 @@
+DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title>Playlist</title>
+    <script src="https://kit.fontawesome.com/c487042078.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .nav {
+        /* border: 2px solid red; */
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    #nav-bar-first {
+        /* border: 2px solid white; */
+        display: block;
+        color: aliceblue;
+        justify-content: center;
+        padding-left: 6px;
+        padding-right: 23px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-right: 545px;
+        margin-left: 86px;
+
+
+
+    }
+
+    .right {
+        display: inline-block;
+        /* border: 2px solid white; */
+        border-radius: 4px;
+        width: 9%;
+
+        position: absolute;
+        left: 76%;
+        bottom: 96px;
+
+    }
+
+
+    #img1 {
+        margin-bottom: 23px;
+        margin-top: -95px;
+        margin-left: -48px;
+    }
+
+    .search {
+        /* border: 2px solid white; */
+        color: aqua;
+        display: block;
+        /* float: left; */
+        padding-left: 189px;
+        justify-content: center;
+        padding-right: 56px;
+        margin-right: 45px;
+        margin-bottom: 66px;
+        margin-left: 352px;
+
+    }
+
+    #sd {
+        margin-bottom: 90px;
+        border: 3px solid white;
+        color: white;
+        width: 229px;
+        justify-content: center;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #bell {
+        position: absolute;
+        left: 87%;
+        bottom: 97px;
+        filter: invert();
+        display: inline-block;
+    }
+
+    #bell:hover{
+        color: yellow;
+        
+    }
+
+    #top-image {
+        position: absolute;
+        left: 89%;
+        bottom: 645px;
+    }
+    #artistimage {height: 400px;
+        width: 400px;
+        opacity:0.9;}
+    
+    #playall {position: absolute;
+        left: 540px;
+        top: 380px;
+        width: 140px;
+        height: 40px;
+        color: white;
+        background-image: linear-gradient(to right,rgb(26, 26, 99),blueviolet,rgb(245, 0, 245));}
+
+    #img-4{
+        margin-bottom: 45px;
+        position: absolute;
+        left: 53.5%;
+        right: 3%;
+        display: block;
+        width: 34px;
+        height: 45px;}
+     #img5{
+        margin-bottom: 45px;
+        position: absolute;
+        left: 2%;
+        right: 3%;
+        display: block;
+        width: 34px;
+        height: 45px;
+    
+    } 
+     #img3{
+        margin-bottom: 45px;
+        position: absolute;
+        left: 27%;
+        right: 3%;
+        display: block;
+        width: 34px;
+        height: 45px;
+        
+    } 
+
+
+
+    .mid{
+        display: inline-block;
+    }
+
+
+
+    #latest1{
+        margin-bottom: 45px;
+        position: absolute;
+        left: 35%;
+        right: 3%;
+        display: inline-block;
+        width: 34px;
+        height: 45px;
+        bottom: 185px;
+    
+
+        
+    }
+    #latest2{
+        margin-bottom: 45px;
+        position: absolute;
+        left: 35%;
+        right: 3%;
+        display: inline-block;
+        width: 34px;
+        height: 45px;
+        bottom: -59px;
+        
+
+        
+
+    }
+    #latest3{
+  margin-bottom: 45px;
+  position: absolute;
+  left: 1%;
+  right: 3%;
+  display: inline-block;
+  width: 34px;
+  height: 45px;
+  bottom: -59px;
+  
+
+}
+ #latest4{ 
+        
+  margin-bottom: 45px;
+  position: absolute;
+  left: 1%;
+  right: 3%;
+  display: inline-block;
+  width: 34px;
+  height: 45px;
+  bottom: 186px;
+  
+
+}
+.icon:hover{
+    color: yellow;
+
+}
+.mainbox{
+    border: 2px solid whitesmoke;
+    background-color: rgb(51, 51, 165);
+  position: absolute;
+  height: 1057px;
+  width: 258px;
+  display: inline-block;
+  left: 1258px;
+  top: -2111px;
+  /* background-color: violet; */
+  overflow: scroll;
+}
+
+
+    
+    
+</style>
+
+<body style="background-color: rgb(6, 0, 37);">
+    <div class="nav">
+        <div class="first">
+            <p id="nav-bar-first">Music Studio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favourites</p>
+
+
+
+        </div>
+
+
+
+        <div class="logo" style="padding-left: 40px;padding-top: 22px;">
+            <img id="img1" src="logo.png" alt="" width="85px" height="90px" style="border-radius: 50%;">
+        </div>
+
+
+
+
+
+        <div class="right" style="position:absolute;top:-15px;">
+            <div class="btn">
+                <input type="search" placeholder="Search" style="background-color: rgb(2, 2, 51);border-radius: 5%;width: 351px;position: absolute;left: -200px;height: 30px;">
+            </div>
+        </div>
+        <div id="bell" style="padding-left: 20px;position:absolute;top:-8px;">
+            <i class="far fa-bell"></i>
+        </div>
+
+
+    </div>
+    <div id="top-image" style="padding-left: 50px;position: absolute;top: 10px;">
+        <img src="abc.jpg" alt="dp" width="85px" height="80px" style="border-radius: 50%;">
+
+    </div>
+    <div class="artist" style="border:2px solid black;width: 1000px;height: 400px;margin-left: 100px;background-color: rgb(2, 2, 51);">
+    <div class="artistimage">
+        <img id="artistimage" src="ed sheeran.jpg"></div>
+    <div class="artistdescription">
+        <H2 style="position: absolute;left: 540px;top: 150px;color: azure;">Ed Sheeran</H2>
+        <p style="position: absolute;left: 540px;top: 185px;color:azure;opacity: 0.4;">English Singer-Songwriter</p>
+        <p style="position: absolute;left: 540px;top: 210px;color: azure;opacity: 0.4;">Edward Christopher Sheeran MBE (born 17 February 1991) is an
+             English <br>singer-songwriter. Born in Halifax, West Yorkshire, he was brought up in Framlingham,<br> Suffolk and began writing songs around 
+             the age of eleven.Sheeran's top songs include <br>Shape of you, Thinking out loud, Perfect, Bad Habits, Shivers.Sheeran has <br>sold more
+             than 150 million records worldwide, making him one of the world's <br>best-selling music artists.[6] He has 84.5 million RIAA-certified units 
+             in the US,<br> and two of his albums are in the list of the best-selling albums in UK chart history.</p>
+        <button id="playall" type="button" >Play All</button>
+        <p style="position: absolute;left: 750px;top: 375px;color: azure;">Follow</p>
+    </div>
+    </div>
+    <div class="similar artist">
+        <div class="first artist">
+        <h1 style="position: absolute;left: 1130px;top:105px;color:azure"><b>Similar artist</b></h1>
+        <p style="position: absolute;left: 1400px;top:123px;color:azure;opacity: 0.4;">View all</p>
+        <img src="coldplay.jpg" style="position: absolute;left: 1130px;top:179px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: 180px;color: azure;">Coldplay</h3> 
+        <p style="position: absolute;left: 1280px;top: 206px;color: azure;opacity: 0.4;">Rock Band</p>
+    </div>
+    <div class="second artist">
+        <img src="onerepublic.jpg" style="position: absolute;left: 1130px;top:325px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: 325px;color: azure;">OneRepublic</h3> 
+        <p style="position: absolute;left: 1280px;top: 350px;color: azure;opacity: 0.4;">Pop Band</p>
+    </div>
+    <div class="third artist">
+        <img src="maroon5.jpg" style="position: absolute;left: 1130px;top:465px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: 470px;color: azure;">Maroon5</h3> 
+        <p style="position: absolute;left: 1280px;top: 495px;color: azure;opacity: 0.4;">Pop Band</p>
+    </div>
+    </div>
+
+    <div class="album songs">
+        <div class="song1" style="border:2px solid black;width: 1000px;height: 130px;margin-left: 100px;background-color:rgb(32, 32, 58) ;margin-top: 30px;">
+            <p style="color: azure;opacity: 0.4;position: absolute;top: 585px;">01.</p>
+            <img src="shapeofyou.jpg" style="width: 110px;height: 110px;position:absolute;left: 140px;top:560px">
+            <p style="position:absolute;left:280px;top:580px;color:azure;">Shape Of You</p>
+            <p style="position: absolute;left: 1000px;top: 540px;color: azure;font-size:45px;opacity: 0.4;">&hearts;</p>
+            <p style="position: absolute;left: 1050px;top: 540px;color: azure;font-size:45px;opacity: 0.4;">+</p>
+        </div>
+        <div class="song2">
+            <div class="song2" style="border:2px solid black;width: 1000px;height: 130px;margin-left: 100px;background-color:rgb(32, 32, 58) ;margin-top: 30px;">
+                <p style="color: azure;opacity: 0.4;position: absolute;top: 755px;">02.</p>
+                <img src="shivers.jpg" style="width: 110px;height: 110px;position:absolute;left: 140px;top:730px">
+                <p style="position:absolute;left:280px;top:750px;color:azure;">Shivers</p>
+                <p style="position: absolute;left: 1000px;top: 710px;color: azure;font-size:45px;opacity: 0.4;">&hearts;</p>
+                <p style="position: absolute;left: 1050px;top: 710px;color: azure;font-size:45px;opacity: 0.4;">+</p>
+            </div>
+        </div>
+        <div class="song3">
+            <div class="song3" style="border:2px solid black;width: 1000px;height: 130px;margin-left: 100px;background-color:rgb(32, 32, 58) ;margin-top: 30px;">
+                <p style="color: azure;opacity: 0.4;position: absolute;top: 925px;">03.</p>
+                <img src="bad habits.jpg" style="width: 110px;height: 110px;position:absolute;left: 140px;top:890px">
+                <p style="position:absolute;left:280px;top:920px;color:azure;">Bad Habits</p>
+                <p style="position: absolute;left: 1000px;top: 870px;color: azure;font-size:45px;opacity: 0.4;">&hearts;</p>
+                <p style="position: absolute;left: 1050px;top: 870px;color: azure;font-size:45px;opacity: 0.4;">+</p>
+            </div>
+        </div>
+        <div class="song4">
+            <div class="song4" style="border:2px solid black;width: 1000px;height: 130px;margin-left: 100px;background-color:rgb(32, 32, 58) ;margin-top: 30px;">
+                <p style="color: azure;opacity: 0.4;position: absolute;top: 1085px;">04.</p>
+                <img src="i dont care.jpg" style="width: 110px;height: 110px;position:absolute;left: 140px;top:1055px">
+                <p style="position:absolute;left:280px;top:1075px;color:azure;">I Don't Care</p>
+                <p style="position: absolute;left: 1000px;top: 1035px;color: azure;font-size:45px;opacity: 0.4;">&hearts;</p>
+                <p style="position: absolute;left: 1050px;top: 1035px;color: azure;font-size:45px;opacity: 0.4;">+</p>
+            </div>
+        </div>
+        <div class="song5">
+            <div class="song5" style="border:2px solid black;width: 1000px;height: 130px;margin-left: 100px;background-color:rgb(32, 32, 58) ;margin-top: 30px;">
+                <p style="color: azure;opacity: 0.4;position: absolute;top: 1245px;">05.</p>
+                <img src="perfect.jpg" style="width: 110px;height: 110px;position:absolute;left: 140px;top:1220px">
+                <p style="position:absolute;left:280px;top:1240px;color:azure;">Perfect</p>
+                <p style="position: absolute;left: 1000px;top: 1200px;color: azure;font-size:45px;opacity: 0.4;">&hearts;</p>
+                <p style="position: absolute;left: 1050px;top: 1200px;color: azure;font-size:45px;opacity: 0.4;">+</p>
+            </div>
+        </div>
+    </div>
+
+         
+<div class="play" style="position: absolute;width: 1510px;height: 115px;left: 0px; background-color:rgb(34, 34, 34);margin-top: 30px;">
+    <div class="musicplay">
+        <i class="fas fa-3x fa-fast-backward"style="color: white; position: absolute;left: 680px;
+        bottom: 84px;height: 3px;"></i>
+    </div>
+    <div class="musicplay">
+        <i class="fas fa-3x fa-fast-forward"style="color: white; position: absolute;left: 817px;
+        bottom: 84px;height: 3px;"></i>
+    </div>
+    <div class="musicplay">
+        <i class="fas fa-3x fa-play-circle"style="color: white; position: absolute;left: 750px;
+        bottom: 84px;height: 3px;"></i>
+    </div>
+    <div id="myprogress-1">
+        <input type="range" name="range" id="myprogress" style="width: 1510px;position: absolute;bottom: 9px;">
+    </div>
+    <div class="music-bar" style="position: absolute;left: 0px;bottom:26px ;">
+        <img src="beggin.jpg" alt="" width="130px" height="110px">
+        <p style="position: absolute;left: 138px;bottom: 31px;color: azure;">Beggin</p>
+            <p style="position: absolute;left: 142px;bottom: 9px;color: azure;">Maneskin</p>
+    </div>
+    
+    
+    
+    
+    
+    <div class="sound">
+        <i class="fas fa-volume-up"style="color: white; position: absolute;left: 1396px;
+        bottom: 55px;height: 26px;"></i>>
+        <i class="fas fa-headset"style="color: white; position: absolute;left: 1435px;
+        bottom: 55px;height: 26px;"></i>
+        <i class="fas fa-volume-off"></i>
+    </div>
+
+    <div class="recently played">
+        <div class="1">
+        <h1 style="position: absolute;left: 1130px;top:-740px;color:azure"><b>Similar artist</b></h1>
+        <p style="position: absolute;left: 1400px;top:-725px;color:azure;opacity: 0.4;">View all</p>
+        <img src="heat waves.jpg" style="position: absolute;left: 1130px;top:-650px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: -650px;color: azure;">Heat Waves</h3> 
+        <p style="position: absolute;left: 1280px;top: -625px;color: azure;opacity: 0.4;">Glass Animals</p>
+        </div>
+        <div class="2">
+        <img src="lovely.jpg" style="position: absolute;left: 1130px;top:-520px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: -520px;color: azure;">Lovely</h3> 
+        <p style="position: absolute;left: 1280px;top: -495px;color: azure;opacity: 0.4;">Billie Eilish</p>
+        </div>
+        <div class="3">
+        <img src="sunflower.jpg" style="position: absolute;left: 1130px;top:-395px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: -400px;color: azure;">Sunflower</h3> 
+        <p style="position: absolute;left: 1280px;top: -375px;color: azure;opacity: 0.4;">Post Malone</p>
+        </div>
+        <div class="4">
+        <img src="hymn for the weekend.jpg" style="position: absolute;left: 1130px;top:-270px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: -270px;color: azure;">Hymn For The Weekend</h3> 
+        <p style="position: absolute;left: 1280px;top: -245px;color: azure;opacity: 0.4;">Coldplay</p>
+        </div>
+        <div class="5">
+        <img src="counting stars.jpg" style="position: absolute;left: 1130px;top:-145px ;width:110px ;height:110px ;">
+        <h3 style="position: absolute;left: 1275px;top: -145px;color: azure;">Counting Stars</h3> 
+        <p style="position: absolute;left: 1280px;top: -120px;color: azure;opacity: 0.4;">oneRepublic</p>
+        </div>
+    </div>
