@@ -1,20 +1,44 @@
-<html lang="en">
-<head>
-    <script>
-        function validate(age){
-            var ans="not eigible";
-            if(age>=18){
-                ans="eligible";
-            }
-            return(ans);
-        }
-    </script>
-</head>
-<body>
-    <script>
-        var age=parseInt(prompt("Enter age"));
-        var status=validate(age);
-        document.write("You are <b>"+status+"</b> for driving");
-    </script>
-</body>
+<!DOCTYPE html> 
+<head> 
+<title>CSS Box Model</title> 
+<style> 
+    /* write your style here */
+    .main
+    {
+        text-align: right;
+        font-size: 40px;
+    }
+    .gfg
+{
+    margin-left: 50;
+    border: 50px solid purple;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    padding: 50px;
+    }
+    .gfg1
+{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-top: 60px;
+    background-color: purple;
+
+}
+.gfg2
+{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+}
+</style> 
+</head> 
+<body> 
+<div class = "main">CSS </div> 
+        	<div class = "gfg"> 
+            <div class = "gfg1">chitkara university </div> 
+            <div class = "gfg2">A best portal for learn Technologies</div> 
+</div> 
+</body> 
 </html>

@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .flex-container {
-            display:flex;
-            flex-wrap: nowrap;
-            background-color: #228d5b;
-            width: 900px;
-        }
-        .flex-container>div {
-            background-color: rgb(182, 103, 103);
-            width: 44px;
-            margin: 5px;
-            text-align: center;
-            line-height: 55px;
-            font-size: 30px;
-        }
-    </style>
+<style>
+p {outline-color:red;}
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+</style>
 </head>
 <body>
-    <div class="flex-container">
-        <div>1</div>
-        <div>2</div>
-        <div style="flex-grow:1 ;">3</div>
-        <div>4</div>
-        <div>5</div>
-        <div style="flex-shrink:">6</div>
-        <div>7</div>
-    </div>
+
+<h2>The outline-style Property</h2>
+
+<p class="dotted">A dotted outline</p>
+<p class="dashed">A dashed outline</p>
+<p class="solid">A solid outline</p>
+<p class="double">A double outline</p>
+<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+
 </body>
 </html>

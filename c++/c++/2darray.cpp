@@ -16,15 +16,16 @@ for(int i=0;i<r;i++){
         cout<<a[i][j]<<" ";
         }
     }
-    if{
+    if(i%2==0){
         for(int j=c-1;j<=0;j--){
             cout<<a[i][j]<<" ";
         }
 
     }
-
+}
 cout<<endl;
 return 0;
+
 }
 
 /*10 20 30 

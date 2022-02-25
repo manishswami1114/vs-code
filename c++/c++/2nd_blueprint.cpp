@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class Mycircle
 {
     float x;
@@ -12,7 +11,7 @@ public:
     }
     void getarea()
     {
-        cout << 3.14 * x * x;
+        cout << 3.14 *(x*x);
     }
     void getcir()
     {

@@ -17,7 +17,7 @@ public:
     void display() {
         cout << "Area of circle is:" << area<<endl;
     }
-    float circle:: circum(){
+    float circle::circum(){
         return 2*3.14*r;
     }
 };

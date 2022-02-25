@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-int  check(int a,int b,int c)
+void  check(int a,int b,int c)
 {
     int tem=a;
     a=b;
     b=c;
     c=tem;
-    cout<<a<<b<<c;
+    cout<<a<<" "<<b<<" "<<c;
 }
 int main()
 {
