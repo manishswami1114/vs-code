@@ -1,10 +1,18 @@
-var wholeNumber = Int.random(in: 10...20)
-print(wholeNumber) 
-switch wholeNumber {
-  case let x where x % 2 == 0:
-    print("Composite")
-  case let x where x % 3 == 0:
-    print("Composite")
-  default:
-    print("Prime")
+import UIkit
+
+// Convert UIImageOrientation to CGImageOrientation for use in Vision analysis.
+extension CGImagePropertyOrientation {
+    init(_ uiImageOrientation: UIImage.Orientation) {
+        switch uiImageOrientation {
+        case .up: self = .up
+        case .down: self = .down
+        case .left: self = .left
+        case .right: self = .right
+        case .upMirrored: self = .upMirrored
+        case .downMirrored: self = .downMirrored
+        case .leftMirrored: self = .leftMirrored
+        case .rightMirrored: self = .rightMirrored
+        default: self = .up
+        }
+    }
 }
