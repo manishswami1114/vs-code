@@ -1,1 +1,40 @@
-{}
+{
+    "lldb.library": "/Applications/Xcode-beta.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ebddee",
+        "activityBar.activeBorder": "#aa9b55",
+        "activityBar.background": "#ebddee",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#aa9b55",
+        "activityBarBadge.foreground": "#15202b",
+        "sash.hoverBorder": "#ebddee",
+        "statusBar.background": "#d7bbdd",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#c399cc",
+        "statusBarItem.remoteBackground": "#d7bbdd",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#d7bbdd",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#d7bbdd99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#d7bbdd",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MariaDB",
+            "name": "spider",
+            "group": "redhat",
+            "database": "cloudsky",
+            "username": "spider",
+            "connectionTimeout": 1
+        }
+    ]
+}

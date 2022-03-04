@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Remove Event Handler</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").select(function(){
+        alert("text marked!");
+    });});
+</script>
+</head>
+<body>
+   <input type="text" value="hello world">
+   <p>select some text inside the input field </p>
+</body>
+</html>

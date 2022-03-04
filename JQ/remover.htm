@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Remove Event Handler</title>
+<style>
+    button{
+        margin: 5px;
+    }
+    button#theone {
+        color:  red;
+        background: yellowgreen;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button  id="theone">Does nothing ...</button>
+    <button id="bind">add click</button>
+    <button id="unbind">removev Click </button>
+    <div style="display: none;">click!</div>
+    <script>
+        function#flash(){
+            $("div").show().fadeOut("slow");
+        }
+        $("#bind").click(function(){
+        $("body").on("click","#theone",flash)
+        .find("#theone")
+        .text("can click");
+    });
+    $("#unbind").click(function(){
+        $("body")
+        .off("click","#theone",flash)
+        .find("#theone")
+        .text("Does nothing ...");
+    });
+    </script>
+</body>
+</html>

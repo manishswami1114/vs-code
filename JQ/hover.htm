@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").hover(function(){
+    $(this).css("background-color", "skyblue");
+    }, function(){
+    $(this).css("background-color", "green");
+  });
+});
+$(document).ready(function(){
+  $("#p1").hover(function(){
+    alert("you enter in the para");
+    }, function(){
+        $("#p1").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Hover the mouse pointer over this paragraph.</p>
+<p id="p1">Hover the mouse pointer over this paragraph.</p>
+</body>
+</html>
+

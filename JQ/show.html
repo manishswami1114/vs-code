@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p.intro").hide();
+  });
+  $("#show").click(function(){
+    $("p.intro").show();
+  });
+  $("#id").click(function(){
+    $("p:first").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the hide button, I will disappear.</p>
+<p>If you click on the hide button</p>
+<p class="intro">the jquerry is child of javascript</p>
+<p class="intro"> hello manish swami</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="id">man</button>
+
+</body>
+</html>

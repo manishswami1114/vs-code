@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Remove Event Handler</title>
+<style>
+    div {
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        background: rgb(199, 42, 42);
+        border: 50px;
+        cursor: pointer;
+    }
+   p {
+        color:  red;
+        background: yellowgreen;
+        margin: left;
+        clear:  left;
+
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>click on the green square ,,,</p>
+    <script>
+        var n =0;
+        $("div").one("click", function(){
+            var index = $("div").index(this);
+            $(this).css({
+                borderstyle: "inset",
+                cursor: "auto"
+            });
+            $("p").text("div at index #"+index+ "clicked."+
+            "that's"+(++n)+"total clicks.");
+        });
+    </script>
+</body>
+</html>

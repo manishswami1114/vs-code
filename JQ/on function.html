@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").on(){
+    click: function(){
+    alert("The paragraph was clicked.");
+  },
+  mouseleave: function(){
+    $(this).css("background-color","red");
+  },
+  mouselenter: function(){
+    $(this).css("background-color","blue");
+  }
+});
+
+</script>
+</head>
+<body>
+
+<p>Click this paragraph.</p>
+
+</body>
+</html>

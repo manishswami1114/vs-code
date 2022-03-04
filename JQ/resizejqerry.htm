@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQuery Remove Event Handler</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>var x =0;
+$(document).ready(function(){
+    $(window).resize(function(){
+        $("span").text(x += 1);
+    });});
+</script>
+</head>
+<body>
+   <p>window resize <span>0</span> times.</p>
+   <p>tyr resizing your browser window.</p>
+</body>
+</html>
