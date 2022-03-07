@@ -7,7 +7,7 @@ void largest(int *arr,int n, int m){
       large=arr[i];
     }
   }
-  int fre[large+1]={0};
+  int fre[large+1]={0}; 
   for(int i=0;i<n;i++){
     fre[arr[i]]++;
   }

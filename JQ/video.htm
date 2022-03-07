@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+</head>
+<body>
+    <p><a href="#" id="videolink1">Change video</a></p>
+<video id="videoclip" controls="controls" poster="images/cover.jpg" title="Video title">
+  <source id="mp4video" src="media/video1.mp4" type="video/mp4"  />
+ </video>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          var videoID = 'videoclip';
+          var sourceID = 'mp4video';
+          var newmp4 = 'media/video2.mp4';
+          var newposter = 'media/video-poster2.jpg';
+         
+          $('#videolink1').click(function(event) {
+            $('#'+videoID).get(0).pause();
+            $('#'+sourceID).attr('src', newmp4);
+            $('#'+videoID).get(0).load();
+             //$('#'+videoID).attr('poster', newposter); //Change video poster
+            $('#'+videoID).get(0).play();
+          });
+        });
+</body>
+</html>

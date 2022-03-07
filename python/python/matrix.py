@@ -2,8 +2,8 @@
 import numpy as np
 
 # input two matrices
-r=10000
-c=10000
+r=30000
+c=30000
 arr1=np.random.rand(r,c)
 arr2=np.random.rand(r,c)
 arr3=np.random.rand(r,c)
