@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>set the value in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").mouseover(function () {
+                $("#test1").text("hello world");
+            });
+            $("#btn2").mouseenter(function () {
+                $("#test2").html("<b>hello world</b>");
+            });
+            $("#btn3").mouseover(function () {
+                $("#test3").val("dolly duck");
+            });
+            $("#btn4").mouseover(function () {
+                $("#test1").text("hello manish");
+            });
+            $("#btn5").mouseover(function () {
+                $("#test2").html("<b>hello manish</b>");
+            });
+            $("#btn6").mouseover(function () {
+                $("#test3").val("dolly work");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <p id="test1">this is paragraph</p>
+    <p id="test2">this is another paragraph</p>
+    <p>input fiels: <input type "text" id="test3" value="mickey mouse"</p>
+    <button id="btn1">show value 1</button>
+    <button id="btn2">show value 2</button>
+    <button id="btn3">show value 3</button>
+    <button id="btn4">show value 4</button>
+    <button id="btn5">show value 5</button>
+    <button id="btn6">show value 6</button>
+
+</body>
+
+</html>

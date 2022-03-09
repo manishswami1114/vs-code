@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>set the value in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("hello world");
+            });
+            $("#btn2").click(function () {
+                $("#test2").html("<b>hello world</b>");
+            });
+            $("#btn3").click(function () {
+                $("#test3").val("dolly duck");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <p id="test1">this is paragraph</p>
+    <p id="test2">this is another paragraph</p>
+    <p>input fiels: <input type "text" id="test3" value="mickey mouse"</p>
+    <button id="btn1">show text value</button>
+    <button id="btn2">show html value</button>
+    <button id="btn3">show val value</button>
+
+</body>
+
+</html>

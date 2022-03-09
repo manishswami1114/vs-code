@@ -1,25 +1,25 @@
 {
     "lldb.library": "/Applications/Xcode-beta.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#ebddee",
-        "activityBar.activeBorder": "#aa9b55",
-        "activityBar.background": "#ebddee",
+        "activityBar.activeBackground": "#ebfbf5",
+        "activityBar.activeBorder": "#ca95ea",
+        "activityBar.background": "#ebfbf5",
         "activityBar.foreground": "#15202b",
         "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#aa9b55",
+        "activityBarBadge.background": "#ca95ea",
         "activityBarBadge.foreground": "#15202b",
-        "sash.hoverBorder": "#ebddee",
-        "statusBar.background": "#d7bbdd",
+        "sash.hoverBorder": "#ebfbf5",
+        "statusBar.background": "#c2f1e0",
         "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#c399cc",
-        "statusBarItem.remoteBackground": "#d7bbdd",
+        "statusBarItem.hoverBackground": "#99e7cb",
+        "statusBarItem.remoteBackground": "#c2f1e0",
         "statusBarItem.remoteForeground": "#15202b",
-        "titleBar.activeBackground": "#d7bbdd",
+        "titleBar.activeBackground": "#c2f1e0",
         "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#d7bbdd99",
+        "titleBar.inactiveBackground": "#c2f1e099",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#d7bbdd",
+    "peacock.color": "#c2f1e0",
     "sqltools.connections": [
         {
             "mysqlOptions": {

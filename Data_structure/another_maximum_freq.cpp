@@ -20,20 +20,20 @@ int mostFrequent(int arr[], int n)
     return res;
 }
  
-
+/*
 int main()
 {
     int arr[] = {4,-2,7,-2,-1,-2,4,-2,7,6,4,4};
     int n = sizeof(arr) / sizeof(arr[0]);
     cout << mostFrequent(arr, n);
     return 0;
-}
-/*int main(){
+}*/
+int main(){
   int n;
   cin>>n;
-  int n = sizeof(arr) / sizeof(arr[0]);
+  //int n = sizeof(arr) / sizeof(arr[0]);
   for(int i=0;i<n;i++){
     cin>>arr[i];
   }
-  mostFrequent(arr,n);
-}*/
+  cout<<mostFrequent(arr,n);
+}

@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 void frequency(int *arr,int n){
   int large=arr[0],small=arr[0];
@@ -68,7 +68,8 @@ int main(){
   }
   frequency(arr,n);
 }
-*/
+
+/*
 #include<bits/stdc++.h>
 using namespace std;
 void freq(int arr[],int n){
@@ -96,3 +97,4 @@ int main(){
     }
     freq(arr,n)
 }
+*/
