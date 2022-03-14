@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+  $("#btn1").mouseover(function(){
+    $("img").before(" Appended text.");
+  });
+  $("#btn2").click(function(){
+    $("img").after("Appended item");
+  });
+  $("#btn3").click(function(){
+    $("#div").remove();
+  });
+  $("#btn4").click(function(){
+    $("#div").empty();
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div">The iPhone SE 3 has been announced with A15 Bionic power, <br>
+    5G and several camera upgrades, and there's a new iPad Air 5 with M1 might.<br> 
+    For power users, Apple has announced the new Mac Studio computer with a blazing 
+    M1 Ultra chip that basically gives you two chips in one. And there's a new Apple <br>
+    Studio Display with 5K resolution and a lower price than the Pro XDR, 
+    although</div>
+<img src="card.jpg" width="50" height=""><br><br>
+<button id="btn1">button</button>
+<button id="btn2">Append list item</button>
+<button id="btn3">remove the div</button>
+<button id="btn4">empty the div</button>
+
+</body>
+</html>
+

@@ -37,7 +37,7 @@ int main(){
 */
 
 // 5 4 3 2 1
-
+/*
 #include <iostream>
 
 using namespace std;
@@ -65,10 +65,10 @@ int main()
 
     print(n);
 }
-
+*/
 // 5 4 3 2 1 1 2 3 4 5
-
 /*
+
 #include<iostream>
 
 using namespace std;
@@ -108,10 +108,10 @@ int main(){
 }
 
 
-
+*/
 //1 2 3 4 5 5 4 3 2 1
 
-
+/*
 
 #include<iostream>
 
@@ -146,7 +146,8 @@ int main(){
     f(n);
 
 }
-
+*/
+/*
 i/p
 
 1
@@ -154,13 +155,13 @@ i/p
 o/p
 
 5
+*/
 
 
 
 
-
-Fibonacci series
-
+//Fibonacci series
+/*
 #include <bits/stdc++.h>
 
 using namespace std;

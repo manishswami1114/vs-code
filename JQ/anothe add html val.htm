@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        #p1{
+            background-color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #p2{
+            background-color: rgb(182, 132, 230);
+            font-family: 'Times New Roman', Times, serif;
+            font-variant: inherit;
+        }
+        #test3{
+            background-color: rgb(202, 161, 111);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#p1").text("add the new paragraph");
+            });
+            $("#btn2").click(function () {
+                $("#p2").html("<b> hello manish</b>");
+            });
+            $("#btn3").click(function () {
+                $("#test3").val("hii buddy");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">this is div</p>
+    <p id="p2">this is  paragraph</p>
+    <p>enter the name: <input type "text" id="test3" value="hii dear"</p>
+    <button id="btn1">text</button>
+    <button id="btn2">html</button>
+    <button id="btn3">value</button>
+</body>
+</html>
