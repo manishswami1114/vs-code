@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h2>javascript function</h2>
+    <script>
+    function doTasks(c1){
+            document.write("tasks 1 is done <br>");
+            c1()
+        }
+        function yetanotherTasks(c2){
+            document.write("task 2 is done<br>");
+            c2()
+        }
+        //yetanotherTasks(doTasks);
+        doTasks(yetanotherTasks);/*
+        function doTasks(callback){
+            document.write("tasks 1 is done <br>");
+            callback()
+        } 
+        function yetanotherTasks(callback2){
+            document.write("task 2 is done<br>");
+            callback2()
+        }
+        yetanotherTasks(doTasks);*/
+        /*
+            function doTasks(){
+            document.write("tasks 1 is done <br>");
+            
+        }
+        function yetanotherTasks(){
+            document.write("task 2 is done<br>");
+          
+        }
+        doTasks();
+        yetanotherTasks();
+        */
+    </script>
+</body>
+</html>

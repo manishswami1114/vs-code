@@ -1,0 +1,69 @@
+<!--<html>
+<head>
+</head>
+<body>
+    <h2>javascript function</h2>
+    <p id="demo"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementryById("demo").innerHTMl = some;
+
+        }
+        let myPromise = new Promise(function (myResolve, myReject) {
+            let x = 6;
+            if (x == 6) {
+                myResolve("Ok");
+            } else {
+                myReject("Error");
+            }
+        });
+        myPromise.then(
+            function (value) {
+                myDisplayer(value);
+            },
+            function (error) {
+                myDisplayer(error);
+            }
+        );
+    </script>
+</body>
+</html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function oddEven(){
+            return Promise = new
+            Promise((resolve,reject) => {
+                resolve(1)
+            })
+        }
+        oddEven().then((Data) => {
+            document.write(data) //1
+            return data*2
+        })
+        .then((data) => {
+            document.write(data)//2
+            return data*3
+        })
+        .then((data) => {
+            document.write(data)//3
+        })
+        .catch((error) => {
+            document.write(error)
+        })
+
+    </script>
+</body>
+</html>
+-->
