@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="message"></div>
+   <script>
+       var msg = document.getElementById("message");
+          function f1(){
+              return new Promise(function (resolve,reject){
+                  setTimeout(function(){
+                      msg.innerHTML += " <p>f1 is starting</p>";
+                      msg.innerHTML += " <p>f1 is ending</p>";
+                      resolve();
+                  },1000)
+              })
+          }
+          function f3(){
+              return new Promise(function (resolve,reject){
+                  setTimeout(function(){
+                      msg.innerHTML += " <p>f3 is starting</p>";
+                      msg.innerHTML += " <p>f3 is ending</p>";
+                      resolve();
+                  },1000)
+              })
+          }
+          async function f2(){
+              msg.innerHTML +="<p>f2 is starting</p>";
+              await f1();
+              await f3();
+              msg.innerHTML +="<p>f2 is ending</p>";
+          }
+          f2();
+      </script>
+</body>
+</html>

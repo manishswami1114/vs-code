@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>wait for the 3 seconds (3000)milesstone</p>
+    <h2>javascript async/await </h2>
+    <p id="demo"></p>
+    <script>
+        async function myDisplayer(){
+            let myPromise = new
+            Promise(function(resolve){
+                setTimeout(function()
+                {
+                    resolve("Have a nice day !");} ,3000 );
+            });
+            document.getElementById("demo").innerHTML=await myPromise;
+        }
+    </script>
+</body>
+</html>
