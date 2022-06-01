@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,a{
+            padding: 15px 30px;
+            display: block;
+            border: 2px solid rgb(0, 3, 3);
+            background: rgb(33, 177, 184);
+        }
+    </style>
+</head>
+<body>
+    <div onclick="alert('Bubbling: ' + this.tagName)">DIV
+        <p onclick="alert('Bubbling: ' + this.tagName)">P
+            <a href="#" onclick="alert('Bubbling: ' + this.tagName)">A</a>
+        </P>
+    </div>
+</body>
+</html>

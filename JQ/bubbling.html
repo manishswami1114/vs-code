@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv1, #mydiv2{
+            background-color: aqua;
+            padding: 50px;
+        }
+        #myp1, #myp2{
+            background-color: azure;
+            font-size: 20px;
+            border: 1px solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv1">
+        <h2>budding</h2>
+        <P id="myp1">click here</P>
+    </div><br>
+    <div id="mydiv2">
+        <h2>capturing</h2>
+        <p id="myp2">click here</p>
+    </div>
+    <script>
+        document.getElementById("myp1").addEventListener("click",function(){
+            alert(" inner element!");
+        },false);
+        document.getElementById("mydiv1").addEventListener("click",function(){
+            alert(" outer element!");
+        },false);
+        document.getElementById("myp2").addEventListener("click",function(){
+            alert(" inner element!");
+        },true);
+        document.getElementById("mydiv2").addEventListener("click",function(){
+            alert(" outer  element!");
+        },true);
+    </script>
+</body>
+</html>

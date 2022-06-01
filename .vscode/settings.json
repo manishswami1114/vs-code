@@ -36,5 +36,12 @@
             "username": "spider",
             "connectionTimeout": 1
         }
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "Disabled",
+    "editor.linkedEditing": true,
+    "files.autoSave": "afterDelay",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoSurround": "brackets"
 }

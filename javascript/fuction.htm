@@ -1,44 +1,34 @@
-<!DOCTYPE html> 
-<head> 
-<title>CSS Box Model</title> 
-<style> 
-    /* write your style here */
-    .main
-    {
-        text-align: right;
-        font-size: 40px;
-    }
-    .gfg
-{
-    margin-left: 50;
-    border: 50px solid purple;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    padding: 50px;
-    }
-    .gfg1
-{
-    font-size: 40px;
-    font-weight: bold;
-    color: black;
-    margin-top: 60px;
-    background-color: purple;
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("#r1").click(function(){
+                let x=prompt();
+                $("#r2").text(x);
+            });
+            $("#r3").click(function(){
+                $("#r2").animate({width:"60%",opacity:"0.3",marginLeft:"0.6in",fontSize:"2em",borderWidth:"5px"});
+            })
+            
+        })
+        
+        </script>
+	</head>
 
-}
-.gfg2
-{
-    font-size: 20px;
-    font-weight: bold;
-    background-color: white;
-}
-</style> 
-</head> 
-<body> 
-<div class = "main">CSS </div> 
-        	<div class = "gfg"> 
-            <div class = "gfg1">chitkara university </div> 
-            <div class = "gfg2">A best portal for learn Technologies</div> 
-</div> 
-</body> 
+	<body>
+	 <div style="height:90px;background-color:purple;border:4px green solid;
+                 text-align:center;">
+         <button id="r1" style="background-color:green;">
+             Button 1
+         </button>
+         <button id = "r3" style="background-color:green;">
+             Button 2
+         </button>
+         <div id ="r2" style="height:40px;width:60px;border:green 4px solid;background-color:green">
+             Hello message
+         </div>
+        </div>
+	</body>
 </html>

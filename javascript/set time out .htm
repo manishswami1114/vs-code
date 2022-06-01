@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("#man").click(function(){
+                let x=prompt();
+                $("#demo").text(x);
+            });
+            $("#ip").click(function(){
+                $("#demo").animate({width:"60%",opacity:"0.3",marginLeft:"0.6in",fontSize:"2em",borderWidth:"5px"});
+            })
+            
+        })
+        
+        </script>
+	</head>
+
+	<body>
+	 <div style="height:90px;background-color:purple;border:4px green solid;
+                 text-align:center;">
+         <button id="man" style="background-color:green;">
+             Button 1
+         </button>
+         <button id = "ip" style="background-color:green;">
+             Button 2
+         </button>
+         <div id ="demo" style="height:40px;width:60px;border:green 4px solid;background-color:green">
+             Hello message
+         </div>
+        </div>
+	</body>
+</html>

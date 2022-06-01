@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,a{
+            padding: 15px 30px;
+            display: block;
+            border: 2px solid rgb(0, 3, 3);
+            background: rgb(130, 199, 202);
+        }
+    </style>
+</head>
+<body>
+    <div>permission
+        <select>
+            <option id="select" >select</option> 
+            <option id="less" onclick="alert(' not invited for the party: ' + this.tagName)">belowe 18 </option>
+            <option id="equal" onclick="alert('  yeah! you can collect the pass: ' + this.tagName)">btw 18 to 32</option>
+            <option id="more" onclick="alert(' try next life for this party: ' + this.tagName)">31 and more</option>
+        </select>
+    </div>
+</body>
+</html>
