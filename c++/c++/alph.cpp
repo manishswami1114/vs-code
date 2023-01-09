@@ -2,10 +2,11 @@
 using namespace std;
 int main()
 {
-    char n ;
-    cin>>n;
-    n=n+32;
-    cout<<n<<endl;
-
-return 0;
+ int x=30, *y, *z;
+ y=&x;     /* Assume address of x is 1000 and integer is 4 byte size */
+ z=y;
+ *y++=*z++;
+ x++;
+ cout<<x<<" "<<y<<" "<<z;
+ return 0;
 }
